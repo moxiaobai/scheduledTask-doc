@@ -9,6 +9,7 @@ nginx配置
 nginx.config
 
 ::
+
    server {
        listen 8989;
        root   /data/wwwroot/scheduledTask_swoole/web;
