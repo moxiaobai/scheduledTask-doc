@@ -11,6 +11,5 @@ scheduled-doc
    :titlesonly:
 
    introduction
-   install
+   worker/index
    web/index
-   tcp/index
