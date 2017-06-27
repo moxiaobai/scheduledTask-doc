@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>scheduled-doc &mdash; scheduled 1.0 文档</title>
+  <title>任务系统web管理 &mdash; scheduled 1.0 文档</title>
   
 
   
@@ -35,8 +35,9 @@
         <link rel="index" title="索引"
               href="genindex.html"/>
         <link rel="search" title="搜索" href="search.html"/>
-    <link rel="top" title="scheduled 1.0 文档" href="#"/>
-        <link rel="next" title="简介" href="introduction.html"/> 
+    <link rel="top" title="scheduled 1.0 文档" href="index.html"/>
+        <link rel="next" title="基于Swoole开发的定时任务系统" href="worker/index.html"/>
+        <link rel="prev" title="简介" href="introduction.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -55,7 +56,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> scheduled
+            <a href="index.html" class="icon icon-home"> scheduled
           
 
           
@@ -82,9 +83,9 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="web.html">任务系统web管理</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">任务系统web管理</a></li>
 <li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="worker/worker_manage.html">worker管理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="worker/worker_config.html">worker配置管理</a></li>
@@ -104,7 +105,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">scheduled</a>
+          <a href="index.html">scheduled</a>
         
       </nav>
 
@@ -132,15 +133,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>scheduled-doc</li>
+      <li>任务系统web管理</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/web.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,18 +154,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scheduled-doc">
-<h1>scheduled-doc<a class="headerlink" href="#scheduled-doc" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="web.html">任务系统web管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="worker/worker_manage.html">worker管理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="worker/worker_config.html">worker配置管理</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="web">
+<h1>任务系统web管理<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h1>
+<div class="section" id="nginx">
+<h2>nginx配置<a class="headerlink" href="#nginx" title="永久链接至标题">¶</a></h2>
+<p>nginx.config</p>
+<dl class="docutils">
+<dt>::</dt>
+<dd><dl class="first docutils">
+<dt>server {</dt>
+<dd><blockquote class="first">
+<div><p>listen 8989;
+root   /data/wwwroot/scheduledTask_swoole/web;
+index  index.html index.php;</p>
+<dl class="docutils">
+<dt>if (!-e $request_filename) {</dt>
+<dd>rewrite ^/(.*) /index.php?$1 last;</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p class="last">include enable-php.conf;</p>
+</dd>
+</dl>
+<p class="last">}</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -178,8 +192,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="worker/index.html" class="btn btn-neutral float-right" title="基于Swoole开发的定时任务系统" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

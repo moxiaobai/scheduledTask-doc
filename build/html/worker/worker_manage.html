@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>scheduled-doc &mdash; scheduled 1.0 文档</title>
+  <title>worker管理 &mdash; scheduled 1.0 文档</title>
   
 
   
@@ -26,20 +26,22 @@
 
   
   
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   
 
   
 
   
         <link rel="index" title="索引"
-              href="genindex.html"/>
-        <link rel="search" title="搜索" href="search.html"/>
-    <link rel="top" title="scheduled 1.0 文档" href="#"/>
-        <link rel="next" title="简介" href="introduction.html"/> 
+              href="../genindex.html"/>
+        <link rel="search" title="搜索" href="../search.html"/>
+    <link rel="top" title="scheduled 1.0 文档" href="../index.html"/>
+        <link rel="up" title="基于Swoole开发的定时任务系统" href="index.html"/>
+        <link rel="next" title="worker配置管理" href="worker_config.html"/>
+        <link rel="prev" title="基于Swoole开发的定时任务系统" href="index.html"/> 
 
   
-  <script src="_static/js/modernizr.min.js"></script>
+  <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
@@ -55,7 +57,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> scheduled
+            <a href="../index.html" class="icon icon-home"> scheduled
           
 
           
@@ -65,7 +67,7 @@
 
           
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
@@ -82,12 +84,12 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="web.html">任务系统web管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="worker/worker_manage.html">worker管理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="worker/worker_config.html">worker配置管理</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../web.html">任务系统web管理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">基于Swoole开发的定时任务系统</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">worker管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="worker_config.html">worker配置管理</a></li>
 </ul>
 </li>
 </ul>
@@ -104,7 +106,7 @@
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">scheduled</a>
+          <a href="../index.html">scheduled</a>
         
       </nav>
 
@@ -132,15 +134,17 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>scheduled-doc</li>
+          <li><a href="index.html">基于Swoole开发的定时任务系统</a> &raquo;</li>
+        
+      <li>worker管理</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/worker/worker_manage.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -153,18 +157,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="scheduled-doc">
-<h1>scheduled-doc<a class="headerlink" href="#scheduled-doc" title="永久链接至标题">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="web.html">任务系统web管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="worker/worker_manage.html">worker管理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="worker/worker_config.html">worker配置管理</a></li>
-</ul>
-</li>
-</ul>
+  <div class="section" id="worker">
+<h1>worker管理<a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>定时任务服务管理<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li>启动服务: php Timer.php start; 守护进程启动: php Timer.php start -d</li>
+<li>关闭服务：php Timer.php stop</li>
+<li>重启服务：php Timer.php reload</li>
+</ol>
 </div>
 </div>
 
@@ -178,8 +179,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="worker_config.html" class="btn btn-neutral float-right" title="worker配置管理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+      
+        <a href="index.html" class="btn btn-neutral" title="基于Swoole开发的定时任务系统" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -209,7 +212,7 @@
 
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
+            URL_ROOT:'../',
             VERSION:'1.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
@@ -217,17 +220,17 @@
             SOURCELINK_SUFFIX: '.txt'
         };
     </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/translations.js"></script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/translations.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
   
 
   
   
-    <script type="text/javascript" src="_static/js/theme.js"></script>
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
   

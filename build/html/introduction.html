@@ -36,7 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="搜索" href="search.html"/>
     <link rel="top" title="scheduled 1.0 文档" href="index.html"/>
-        <link rel="next" title="基于Swoole开发的定时任务系统" href="worker/index.html"/>
+        <link rel="next" title="任务系统web管理" href="web.html"/>
         <link rel="prev" title="scheduled-doc" href="index.html"/> 
 
   
@@ -85,8 +85,10 @@
             
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a></li>
-<li class="toctree-l1"><a class="reference internal" href="web/index.html">计划任务web管理系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="web.html">任务系统web管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a><ul class="simple">
+</ul>
+</li>
 </ul>
 
             
@@ -152,6 +154,25 @@
             
   <div class="section" id="id1">
 <h1>简介<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>核心特征<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li>支持两种任务类型：第一种Curl模式，第二种PHP Cli模式，文件只能放在本地服务器。Cli方式又分为Yaf Cli模式和原生无任何框架Cli模式；</li>
+<li>任务执行方式分三种：第一种循环执行，设置间隔执行时间，可以精确到秒；第二种每天执行一次，设置每天固定时间执行；第三种只执行一次</li>
+<li>系统需要按照yaf（3.0.2），yaconf（1.0.1），swoole（1.9.10）扩展</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>目录结构介绍<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li>worker目录是计划任务系统目录，基于swoole开发；</li>
+<li>web目录是任务管理系统后台，基于yaf开发，登录接入UAP；</li>
+<li>yafCli是yaf cli模式， phpCli是php原生Cli模式；</li>
+<li>vendor第三方类，通过composer来配置；src是本地需要用到的类；</li>
+<li>config为配置目录，cron_application.ini为项目配置，cron_database.ini为数据库配置</li>
+<li>log为日志目录</li>
+</ol>
+</div>
 </div>
 
 
@@ -164,7 +185,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="worker/index.html" class="btn btn-neutral float-right" title="基于Swoole开发的定时任务系统" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="web.html" class="btn btn-neutral float-right" title="任务系统web管理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral" title="scheduled-doc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

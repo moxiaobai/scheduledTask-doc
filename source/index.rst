@@ -11,5 +11,5 @@ scheduled-doc
    :titlesonly:
 
    introduction
+   web
    worker/index
-   web/index
