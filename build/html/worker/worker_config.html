@@ -36,7 +36,7 @@
               href="../genindex.html"/>
         <link rel="search" title="搜索" href="../search.html"/>
     <link rel="top" title="scheduled 1.0 文档" href="../index.html"/>
-        <link rel="up" title="基于Swoole开发的定时任务系统" href="index.html"/>
+        <link rel="up" title="任务Server管理" href="index.html"/>
         <link rel="prev" title="worker管理" href="worker_manage.html"/> 
 
   
@@ -92,8 +92,8 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../web.html">任务系统web管理</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">基于Swoole开发的定时任务系统</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../web.html">web管理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">任务Server管理</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="worker_manage.html">worker管理</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">worker配置管理</a></li>
 </ul>
@@ -142,7 +142,7 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="index.html">基于Swoole开发的定时任务系统</a> &raquo;</li>
+          <li><a href="index.html">任务Server管理</a> &raquo;</li>
         
       <li>worker配置管理</li>
     
@@ -166,8 +166,26 @@
   <div class="section" id="worker">
 <h1>worker配置管理<a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
-<h2>worker配置文件说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>任务报警间隔时间为20分钟一次</p>
+<h2>任务报警说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>1.任务报警间隔时间为20分钟一次
+2.短信和邮件通知</p>
+</div>
+<div class="section" id="cron-application-ini">
+<h2>应用配置(cron_application.ini)<a class="headerlink" href="#cron-application-ini" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">;</span><span class="n">计划任务系统服务</span>
+<span class="n">cronServer</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span>
+<span class="n">cronServer</span><span class="o">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">9503</span>
+
+<span class="p">;</span><span class="n">yaf</span> <span class="n">cli程序执行目录</span>
+<span class="n">yafCli</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">scheduledTask_swoole</span><span class="o">/</span><span class="n">yafCli</span><span class="o">/</span>
+
+<span class="p">;</span><span class="n">php</span> <span class="n">cli程序执行目录</span>
+<span class="n">phpCli</span><span class="o">.</span><span class="n">directory</span> <span class="o">=</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">scheduledTask_swoole</span><span class="o">/</span><span class="n">phpCli</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="cron-database-ini">
+<h2>数据库配置(cron_database.ini)<a class="headerlink" href="#cron-database-ini" title="永久链接至标题">¶</a></h2>
 </div>
 </div>
 

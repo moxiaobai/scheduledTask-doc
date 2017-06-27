@@ -1,5 +1,5 @@
 =================
-任务系统web管理
+web管理
 =================
 
 
@@ -21,3 +21,13 @@ nginx.config
     
       include enable-php.conf;
    }
+
+
+网站配置
+=======================
+
+web/config/aplicaiton.ini修改app.host
+
+::
+
+  app.host = http://192.168.1.80:8989

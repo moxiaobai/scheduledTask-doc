@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>任务系统web管理 &mdash; scheduled 1.0 文档</title>
+  <title>web管理 &mdash; scheduled 1.0 文档</title>
   
 
   
@@ -36,7 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="搜索" href="search.html"/>
     <link rel="top" title="scheduled 1.0 文档" href="index.html"/>
-        <link rel="next" title="基于Swoole开发的定时任务系统" href="worker/index.html"/>
+        <link rel="next" title="任务Server管理" href="worker/index.html"/>
         <link rel="prev" title="简介" href="introduction.html"/> 
 
   
@@ -92,8 +92,8 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">简介</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">任务系统web管理</a></li>
-<li class="toctree-l1"><a class="reference internal" href="worker/index.html">基于Swoole开发的定时任务系统</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">web管理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="worker/index.html">任务Server管理</a></li>
 </ul>
 
             
@@ -138,7 +138,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>任务系统web管理</li>
+      <li>web管理</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -158,7 +158,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="web">
-<h1>任务系统web管理<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h1>
+<h1>web管理<a class="headerlink" href="#web" title="永久链接至标题">¶</a></h1>
 <div class="section" id="nginx">
 <h2>nginx配置<a class="headerlink" href="#nginx" title="永久链接至标题">¶</a></h2>
 <p>nginx.config</p>
@@ -176,6 +176,13 @@
 </pre></div>
 </div>
 </div>
+<div class="section" id="id1">
+<h2>网站配置<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>web/config/aplicaiton.ini修改app.host</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">host</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">1.80</span><span class="p">:</span><span class="mi">8989</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -188,7 +195,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="worker/index.html" class="btn btn-neutral float-right" title="基于Swoole开发的定时任务系统" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="worker/index.html" class="btn btn-neutral float-right" title="任务Server管理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="introduction.html" class="btn btn-neutral" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
